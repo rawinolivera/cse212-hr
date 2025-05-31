@@ -24,14 +24,22 @@
 
         // Find the index of the item with the highest priority to remove
         var highPriorityIndex = 0;
-        for (int index = 1; index < _queue.Count - 1; index++)
+        for (int index = 1; index < _queue.Count; index++)
         {
-            if (_queue[index].Priority >= _queue[highPriorityIndex].Priority)
+            if (_queue[index].Priority > _queue[highPriorityIndex].Priority)
                 highPriorityIndex = index;
         }
-
+        
+        /* prueba
+            j cl ch ma lo ol - martha is out
+            cl ch lo ol - jo is out
+            cl ch lo - ol is out
+            cl lo - ch took priority and is out, lo is rejected because we removed the equal (=) from the for
+            cl - lo is out
+        */
         // Remove and return the item with the highest priority
         var value = _queue[highPriorityIndex].Value;
+        _queue.RemoveAt(highPriorityIndex);
         return value;
     }
 
