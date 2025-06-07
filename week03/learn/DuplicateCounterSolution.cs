@@ -1,4 +1,4 @@
-﻿public class DuplicateCounterSolution
+﻿    public class DuplicateCounterSolution
 {
     //CSE 212 Lesson 5C Solved
     //Count how many duplicates are in a collection of data.
