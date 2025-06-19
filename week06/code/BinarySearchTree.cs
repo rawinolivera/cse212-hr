@@ -53,7 +53,7 @@ public class BinarySearchTree : IEnumerable<int>
         {
             yield return number;
         }
-    }
+    }   
 
     private void TraverseForward(Node? node, List<int> values)
     {
